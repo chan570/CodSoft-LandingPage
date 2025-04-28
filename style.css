@@ -411,8 +411,9 @@ border-color: black;}
 .form-inline button:hover {
   background-color:skyblue;
 }
+/* Responsive */
 
- @media (max-width: 768px) {
+  @media (max-width: 768px) {
 
     .container {
       padding: 1rem;
