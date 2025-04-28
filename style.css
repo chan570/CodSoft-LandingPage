@@ -411,54 +411,95 @@ border-color: black;}
 .form-inline button:hover {
   background-color:skyblue;
 }
-/* Responsive */
-@media (max-width: 1000px) {
-  .about-choose-wrapper {
-    flex-direction: column;
-    align-items: center;
-  }
-  .about-box, .choose-box {
-    max-width: 90%;
-  }
-}
-@media (width < 1200px) {
-  .search {
-    max-width: 235px;
-  }
 
-  .destination__container {
-    grid-template-columns: 1fr;
-  }
-}
+ @media (max-width: 768px) {
 
-@media (width < 900px) {
-  .nav__links {
-    display: none;
+    .container {
+      padding: 1rem;
+      flex-direction: column;
+    }
+  
+    nav {
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 10px;
+    }
+  
+    .nav__links {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .destination__container {
+      position: relative;
+      grid-template-columns: 1fr;
+      padding: 1rem;
+      gap: 1rem;
+    }
+  
+    .destination__grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .destination__card {
+      width: 100%;
+      margin-right: 0;
+    }
+  
+    .about-choose-wrapper {
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 20px;
+    }
+  
+    .about-box,
+    .choose-box {
+      min-width: 100%;
+      height: auto;
+    }
+  
+    .package {
+      width: 100%;
+      padding: 15px;
+    }
+  
+    .form-inline {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .form-inline input[type="text"],
+    .form-inline input[type="date"],
+    .form-inline button {
+      width: 100%;
+    }
+  
+    .socials {
+      position: relative;
+      top: unset;
+      left: unset;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+  
+    .socials::after {
+      display: none;
+    }
+  
+    .content h1 {
+      font-size: 2.5rem;
+      text-align: center;
+    }
+  
+    .content p {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .content .btn {
+      margin: 1rem auto 0;
+      display: block;
+    }
   }
-
-  .content h1 {
-    font-size: 4rem;
-  }
-
-  .destination__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (width < 600px) {
-  .search {
-    display: none;
-  }
-
-  .destination__container {
-    padding-left: 3rem;
-  }
-
-  .content h1 {
-    font-size: 3rem;
-  }
-
-  .destination__grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
